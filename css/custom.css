@@ -1,12 +1,14 @@
-/*!
- * Start Bootstrap - Full Width Pics (https://startbootstrap.com/template-overviews/full-width-pics)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-width-pics/blob/master/LICENSE)
+/* bootstrap used -
+ * licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-width-pics/blob/master/LICENSE)
  */
 body {
   padding-top: 56px;
 }
-
+footer{
+    background-attachment: fixed;
+    padding-top: 10px;
+    padding-bottom: 1px;
+}
 .bg-image-full {
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
@@ -14,62 +16,115 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
-
 .super{
-    font-weight:500;
+    font-weight: 500;
 }
 .title{
-    color:#004d66;
+    color: #004d66;
     text-align:center;
     font-size:60px;
 }
 .subtitle{
-    color:white;
-    text-align:center;
-    padding:0px;
-    margin:0px;
-    font-size:25px;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-size: 25px;
 }
 .fancyhr{
     border: 1px solid #000a1a;
-    border-radius:1px;
-    background-color:#004d66;
-    margin:0px;
+    border-radius: 1px;
+    background-color: #004d66;
+    margin: 0px;
 }
 .sub{
-    color:#004d66;
-    text-align:center;
-    font-size:20px;
-    margin-bottom:0px;
-    font-weight:500;
+    color: #004d66;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 500;
 }
-.contactUs{
-    color:white;
+.servicesList{
+    display: inline-block;
+    vertical-align:top;
+    text-align: center;
+    width:45%;
+    padding-bottom:20px;
+    padding-top:20px;
+    font-size: 1.5em;
+}
+@media only screen and (max-width: 950px) {
+    .servicesList {
+        text-align: left;
+        float: left;
+        padding-left: 5%;
+        width:100%;
+    }
+}
+.serv{
+    display: list-item;
+    list-style-type: circle;
+    list-style-position: inside;
+    direction: ltr;
+}
+.bannerText{
+    color: white;
 }
 .nav-item{
-    padding-left:20px;
-    padding-right:20px;
-    text-align:center;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
 }
 .header{
-    height:300px;
+    height: 300px;
 }
 #topnav {
-    background-color:#004d66;
+    background-color: #004d66;
+    margin-top: -60px !important;
 }
-
 #titlenav{
     font-weight:7;
 }
-
 #tophead{
-    font-weight:400;
-    font-size:17px;
+    font-weight: 400;
+    font-size: 17px;
 }
-
-#textblock{
-    background-color:black;
+#imageblock{
+    background-color: black;
     background: rgba(0,0,0,0.80);
+}
+#textblock{
+    background-color: black;
+    background: rgba(0,0,0,0.80);
+    margin-top: 40px;
+}
+#indexBanner{
+    background-image: url('../images/headerphillysunset.jpg');
+    background-attachment: fixed;
+    background-position: 0px -200px;
+}
+#indexFooter{
+    background-image: url('../images/headerphillysunset.jpg');
+    background-position: 0px -1150px;
+    filter: brightness(10%);
+}
+#indexContent{
+    font-size: 1.4em;
+}
+#servicesBanner{
+    background-image: url('../images/headerhighwaycars.jpg');
+    background-attachment: fixed;
+    background-position: 0px -400px;
+    height: 300px;
+}
+#servicesMain{
+    text-align: center;
+    
+}
+#servicesFooter{
+    background-image: url('../images/headerphillysunset.jpg');
+    background-position: 0px -1150px;
+    filter: brightness(10%);
 }
 #minimap{
     background-color: #004d66;
@@ -80,8 +135,43 @@ body {
 #subtitleback{
     background-color: #cccccc;
 }
+#callMessage{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.8em;
+}
+#couponContainer{
+    height: 315px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 #hours{
-    margin-bottom:5px;
-    margin-top:10px;
-    font-weight:600;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+#couponPrint{
+    background-color: #1b8be1;
+    border: 2px solid black;
+    font-size: 1.5em;
+    border-radius:10%;
+}
+#footerText{
+    color: white;
+    text-align: center;
+    filter: brightness(100%) !important;
+}
+@media print {
+  #noPrint * {
+    visibility: hidden;
+  }
+  #couponContainer, #couponContainer * {
+    visibility: visible;
+  }
+  #couponContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
